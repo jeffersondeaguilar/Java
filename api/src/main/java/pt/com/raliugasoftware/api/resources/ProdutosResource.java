@@ -29,13 +29,13 @@ public class ProdutosResource {
 	
 	@GetMapping("/produto")
 	@ApiOperation(value = "Retorna uma lista de produtos")
-	public List<Produtos> listaPilotos(){
+	public List<Produtos> listaProdutos(){
 		return produtosRepository.findAll();
 	}
 	
 	@GetMapping("/produto/{id}")
 	@ApiOperation(value = "Retorna um produto")
-	public void listaPiloto(@PathVariable(value ="id") Integer id) {
+	public void listaProduto(@PathVariable(value ="id") Integer id) {
 		produtosRepository.findById(id);
 	}
 	
